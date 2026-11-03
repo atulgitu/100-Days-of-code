@@ -19,26 +19,21 @@ Output 3:
 
 */
 #include <stdio.h>
-
 int main() {
-    int n, i, nums[100], seen[1000] = {0};
+    int n,i,nums[100],seen[1000]={0};
     printf("Enter the size of array: ");
-    scanf("%d", &n);
-
-    printf("Enter %d elements (0 to 999): ", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &nums[i]);
+    scanf("%d",&n);
+    printf("Enter %d elements (0 to 999): ",n);
+    for(i=0;i<n;i++) {
+        scanf("%d",&nums[i]);
     }
-
-    // single loop: if we have already seen the number, it is the repeated one
-    for (i = 0; i < n; i++) {
-        if (seen[nums[i]] == 1) {
-            printf("%d", nums[i]);
+    for(i=0;i<n;i++) {
+        if(seen[nums[i]]==1) {
+            printf("%d",nums[i]);
             return 0;
         }
-        seen[nums[i]] = 1;
+        seen[nums[i]]=1;
     }
-
     printf("No repeated element");
     return 0;
 }

@@ -6,46 +6,35 @@ Input 1:
 nums = [1,7,3,6,5,6]
 Output 1:
 3
-Explanation 1:
-The pivot index is 3. Left sum = 1 + 7 + 3 = 11, Right sum = 5 + 6 = 11.
 
 Input 2:
 nums = [1,2,3]
 Output 2:
 -1
-Explanation 2:
-There is no index that satisfies the conditions in the problem statement.
 
 Input 3:
 nums = [2,1,-1]
 Output 3:
 0
-Explanation 3:
-The pivot index is 0. Left sum = 0 (no elements to the left), Right sum = 1 + (-1) = 0.
 
 */
 #include <stdio.h>
-
 int main() {
-    int n, i, nums[100], total = 0, leftSum = 0, pivot = -1;
+    int n,i,nums[100],total=0,leftSum=0,pivot=-1;
     printf("Enter the size of array: ");
-    scanf("%d", &n);
-
-    printf("Enter %d elements: ", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &nums[i]);
-        total = total + nums[i];
+    scanf("%d",&n);
+    printf("Enter %d elements: ",n);
+    for(i=0;i<n;i++) {
+        scanf("%d",&nums[i]);
+        total=total+nums[i];
     }
-
-    for (i = 0; i < n; i++) {
-        // right sum = total - left sum - current element
-        if (leftSum == total - leftSum - nums[i]) {
-            pivot = i;
+    for(i=0;i<n;i++) {
+        if(leftSum==total-leftSum-nums[i]) {
+            pivot=i;
             break;
         }
-        leftSum = leftSum + nums[i];
+        leftSum=leftSum+nums[i];
     }
-
-    printf("%d", pivot);
+    printf("%d",pivot);
     return 0;
 }

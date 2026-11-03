@@ -19,38 +19,35 @@ Output 3:
 
 */
 #include <stdio.h>
-
 int main() {
-    int a, b;
+    int a,b;
     char op;
     printf("Enter two numbers and an operator (+, -, *, /, %%): ");
-    scanf("%d %d %c", &a, &b, &op);
-
-    switch (op) {
+    scanf("%d %d %c",&a,&b,&op);
+    switch(op) {
         case '+':
-            printf("%d", a + b);
+            printf("%d",a+b);
             break;
         case '-':
-            printf("%d", a - b);
+            printf("%d",a-b);
             break;
         case '*':
-            printf("%d", a * b);
+            printf("%d",a*b);
             break;
         case '/':
-            if (b == 0)
+            if(b==0)
                 printf("Division by zero is not allowed");
             else
-                printf("%d", a / b);
+                printf("%d",a/b);
             break;
         case '%':
-            if (b == 0)
+            if(b==0)
                 printf("Division by zero is not allowed");
             else
-                printf("%d", a % b);
+                printf("%d",a%b);
             break;
         default:
             printf("Invalid operator");
     }
-
     return 0;
 }

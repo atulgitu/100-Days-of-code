@@ -14,36 +14,28 @@ Output 2:
 
 */
 #include <stdio.h>
-
 int main() {
-    int n, i, nums[100], answer[100], suffix = 1;
+    int n,i,nums[100],answer[100],suffix=1;
     printf("Enter the size of array: ");
-    scanf("%d", &n);
-
-    printf("Enter %d elements: ", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &nums[i]);
+    scanf("%d",&n);
+    printf("Enter %d elements: ",n);
+    for(i=0;i<n;i++) {
+        scanf("%d",&nums[i]);
     }
-
-    // answer[i] = product of all elements on the left of i
-    answer[0] = 1;
-    for (i = 1; i < n; i++) {
-        answer[i] = answer[i - 1] * nums[i - 1];
+    answer[0]=1;
+    for(i=1;i<n;i++) {
+        answer[i]=answer[i-1]*nums[i-1];
     }
-
-    // multiply with product of all elements on the right of i
-    for (i = n - 1; i >= 0; i--) {
-        answer[i] = answer[i] * suffix;
-        suffix = suffix * nums[i];
+    for(i=n-1;i>=0;i--) {
+        answer[i]=answer[i]*suffix;
+        suffix=suffix*nums[i];
     }
-
     printf("[");
-    for (i = 0; i < n; i++) {
-        if (i > 0)
+    for(i=0;i<n;i++) {
+        if(i>0)
             printf(",");
-        printf("%d", answer[i]);
+        printf("%d",answer[i]);
     }
     printf("]");
-
     return 0;
 }

@@ -9,19 +9,16 @@ Output 1:
 
 */
 #include <stdio.h>
-
 int main() {
-    int dd, mm, yyyy;
-    char months[12][4] = {"Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+    int dd,mm,yyyy;
+    char months[12][4]={"Jan","Feb","Mar","Apr","May","Jun",
+                          "Jul","Aug","Sep","Oct","Nov","Dec"};
     printf("Enter date (dd/mm/yyyy): ");
-    scanf("%d/%d/%d", &dd, &mm, &yyyy);
-
-    if (mm < 1 || mm > 12) {
+    scanf("%d/%d/%d",&dd,&mm,&yyyy);
+    if(mm<1||mm>12) {
         printf("Invalid month");
         return 0;
     }
-
-    printf("%02d-%s-%d", dd, months[mm - 1], yyyy);
+    printf("%02d-%s-%d",dd,months[mm-1],yyyy);
     return 0;
 }

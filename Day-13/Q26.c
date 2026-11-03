@@ -14,15 +14,12 @@ Output 2:
 
 */
 #include <stdio.h>
-
 int main() {
-    int n, i;
+    int n,i;
     printf("Enter the value of n: ");
-    scanf("%d", &n);
-
-    for (i = 1; i <= n; i++) {
-        printf("%d ", i);
+    scanf("%d",&n);
+    for(i=1;i<=n;i++) {
+        printf("%d ",i);
     }
-
     return 0;
 }

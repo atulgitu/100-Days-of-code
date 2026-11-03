@@ -19,21 +19,17 @@ We Are Going To Look At 26 Different Test Cases.
 
 */
 #include <stdio.h>
-
 int main() {
     char str[200];
     int i;
     printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-
-    for (i = 0; str[i] != '\0'; i++) {
-        // first letter of every word becomes capital
-        if (i == 0 || str[i - 1] == ' ') {
-            if (str[i] >= 'a' && str[i] <= 'z')
-                str[i] = str[i] - 32;
+    fgets(str,sizeof(str),stdin);
+    for(i=0;str[i]!='\0';i++) {
+        if(i==0||str[i-1]==' ') {
+            if(str[i]>='a'&&str[i]<='z')
+                str[i]=str[i]-32;
         }
     }
-
-    printf("%s", str);
+    printf("%s",str);
     return 0;
 }

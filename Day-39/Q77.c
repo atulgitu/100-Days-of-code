@@ -20,30 +20,25 @@ True
 
 */
 #include <stdio.h>
-
 int main() {
-    int r, c, i, j, a[10][10], distinct = 1;
+    int r,c,i,j,a[10][10],distinct=1;
     printf("Enter rows and columns: ");
-    scanf("%d %d", &r, &c);
-
+    scanf("%d %d",&r,&c);
     printf("Enter the elements:\n");
-    for (i = 0; i < r; i++) {
-        for (j = 0; j < c; j++) {
-            scanf("%d", &a[i][j]);
+    for(i=0;i<r;i++) {
+        for(j=0;j<c;j++) {
+            scanf("%d",&a[i][j]);
         }
     }
-
-    for (i = 0; i < r && i < c; i++) {
-        for (j = i + 1; j < r && j < c; j++) {
-            if (a[i][i] == a[j][j])
-                distinct = 0;
+    for(i=0;i<r&&i<c;i++) {
+        for(j=i+1;j<r&&j<c;j++) {
+            if(a[i][i]==a[j][j])
+                distinct=0;
         }
     }
-
-    if (distinct == 1)
+    if(distinct==1)
         printf("True");
     else
         printf("False");
-
     return 0;
 }

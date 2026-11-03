@@ -6,48 +6,37 @@ Input 1:
 arr[] = [10, 5, 4, 3, 48, 6, 2, 33, 53, 10], k = 4
 Output 1:
 5
-Explanation 1:
-4th smallest element in the given array is 5.
 
 Input 2:
 arr[] = [7, 10, 4, 3, 20, 15], k = 3
 Output 2:
 7
-Explanation 2:
-3rd smallest element in the given array is 7.
 
 */
 #include <stdio.h>
-
 int main() {
-    int n, i, j, arr[100], k, temp;
+    int n,i,j,arr[100],k,temp;
     printf("Enter the size of array: ");
-    scanf("%d", &n);
-
-    printf("Enter %d elements: ", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+    scanf("%d",&n);
+    printf("Enter %d elements: ",n);
+    for(i=0;i<n;i++) {
+        scanf("%d",&arr[i]);
     }
-
     printf("Enter k: ");
-    scanf("%d", &k);
-
-    if (k <= 0 || k > n) {
+    scanf("%d",&k);
+    if(k<=0||k>n) {
         printf("Invalid k");
         return 0;
     }
-
-    // bubble sort in ascending order
-    for (i = 0; i < n - 1; i++) {
-        for (j = 0; j < n - 1 - i; j++) {
-            if (arr[j] > arr[j + 1]) {
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+    for(i=0;i<n-1;i++) {
+        for(j=0;j<n-1-i;j++) {
+            if(arr[j]>arr[j+1]) {
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
             }
         }
     }
-
-    printf("%d", arr[k - 1]);
+    printf("%d",arr[k-1]);
     return 0;
 }

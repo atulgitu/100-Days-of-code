@@ -16,26 +16,22 @@ Max=10, Min=10
 
 */
 #include <stdio.h>
-
 int main() {
-    int n, i, arr[100], max, min;
+    int n,i,arr[100],max,min;
     printf("Enter the size of array: ");
-    scanf("%d", &n);
-
-    printf("Enter %d elements: ", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+    scanf("%d",&n);
+    printf("Enter %d elements: ",n);
+    for(i=0;i<n;i++) {
+        scanf("%d",&arr[i]);
     }
-
-    max = arr[0];
-    min = arr[0];
-    for (i = 1; i < n; i++) {
-        if (arr[i] > max)
-            max = arr[i];
-        if (arr[i] < min)
-            min = arr[i];
+    max=arr[0];
+    min=arr[0];
+    for(i=1;i<n;i++) {
+        if(arr[i]>max)
+            max=arr[i];
+        if(arr[i]<min)
+            min=arr[i];
     }
-
-    printf("Max=%d, Min=%d", max, min);
+    printf("Max=%d, Min=%d",max,min);
     return 0;
 }

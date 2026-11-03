@@ -9,25 +9,22 @@ Spaces=1, Digits=2, Special=1
 
 */
 #include <stdio.h>
-
 int main() {
-    char str[100], ch;
-    int i, spaces = 0, digits = 0, special = 0;
+    char str[100],ch;
+    int i,spaces=0,digits=0,special=0;
     printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-
-    for (i = 0; str[i] != '\0' && str[i] != '\n'; i++) {
-        ch = str[i];
-        if (ch == ' ')
+    fgets(str,sizeof(str),stdin);
+    for(i=0;str[i]!='\0'&&str[i]!='\n';i++) {
+        ch=str[i];
+        if(ch==' ')
             spaces++;
-        else if (ch >= '0' && ch <= '9')
+        else if(ch>='0'&&ch<='9')
             digits++;
-        else if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+        else if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z'))
             continue;
         else
             special++;
     }
-
-    printf("Spaces=%d, Digits=%d, Special=%d", spaces, digits, special);
+    printf("Spaces=%d, Digits=%d, Special=%d",spaces,digits,special);
     return 0;
 }

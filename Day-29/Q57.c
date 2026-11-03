@@ -16,18 +16,15 @@ Output 2:
 
 */
 #include <stdio.h>
-
 int main() {
-    int n, i, arr[100], sum = 0;
+    int n,i,arr[100],sum=0;
     printf("Enter the size of array: ");
-    scanf("%d", &n);
-
-    printf("Enter %d elements: ", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-        sum = sum + arr[i];
+    scanf("%d",&n);
+    printf("Enter %d elements: ",n);
+    for(i=0;i<n;i++) {
+        scanf("%d",&arr[i]);
+        sum=sum+arr[i];
     }
-
-    printf("%d", sum);
+    printf("%d",sum);
     return 0;
 }

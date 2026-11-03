@@ -14,17 +14,14 @@ Approximate sum: 2.22
 
 */
 #include <stdio.h>
-
 int main() {
-    int n, i;
-    float sum = 0;
+    int n,i;
+    float sum=0;
     printf("Enter the number of terms: ");
-    scanf("%d", &n);
-
-    for (i = 1; i <= n; i++) {
-        sum = sum + (float)(2 * i) / (4 * i - 1);
+    scanf("%d",&n);
+    for(i=1;i<=n;i++) {
+        sum=sum+(float)(2*i)/(4*i-1);
     }
-
-    printf("Approximate sum: %.2f", sum);
+    printf("Approximate sum: %.2f",sum);
     return 0;
 }

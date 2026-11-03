@@ -16,24 +16,20 @@ Even=4, Odd=0
 
 */
 #include <stdio.h>
-
 int main() {
-    int n, i, arr[100], even = 0, odd = 0;
+    int n,i,arr[100],even=0,odd=0;
     printf("Enter the size of array: ");
-    scanf("%d", &n);
-
-    printf("Enter %d elements: ", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+    scanf("%d",&n);
+    printf("Enter %d elements: ",n);
+    for(i=0;i<n;i++) {
+        scanf("%d",&arr[i]);
     }
-
-    for (i = 0; i < n; i++) {
-        if (arr[i] % 2 == 0)
+    for(i=0;i<n;i++) {
+        if(arr[i]%2==0)
             even++;
         else
             odd++;
     }
-
-    printf("Even=%d, Odd=%d", even, odd);
+    printf("Even=%d, Odd=%d",even,odd);
     return 0;
 }

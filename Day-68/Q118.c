@@ -19,21 +19,16 @@ Output 3:
 
 */
 #include <stdio.h>
-
 int main() {
-    int n, i, nums[100], sum = 0, expected;
+    int n,i,nums[100],sum=0,expected;
     printf("Enter the size of array: ");
-    scanf("%d", &n);
-
-    printf("Enter %d elements: ", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &nums[i]);
-        sum = sum + nums[i];
+    scanf("%d",&n);
+    printf("Enter %d elements: ",n);
+    for(i=0;i<n;i++) {
+        scanf("%d",&nums[i]);
+        sum=sum+nums[i];
     }
-
-    // sum of all numbers from 0 to n
-    expected = n * (n + 1) / 2;
-
-    printf("%d", expected - sum);
+    expected=n*(n+1)/2;
+    printf("%d",expected-sum);
     return 0;
 }

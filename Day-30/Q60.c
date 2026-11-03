@@ -10,26 +10,22 @@ Positive=2, Negative=2, Zero=1
 
 */
 #include <stdio.h>
-
 int main() {
-    int n, i, arr[100], pos = 0, neg = 0, zero = 0;
+    int n,i,arr[100],pos=0,neg=0,zero=0;
     printf("Enter the size of array: ");
-    scanf("%d", &n);
-
-    printf("Enter %d elements: ", n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
+    scanf("%d",&n);
+    printf("Enter %d elements: ",n);
+    for(i=0;i<n;i++) {
+        scanf("%d",&arr[i]);
     }
-
-    for (i = 0; i < n; i++) {
-        if (arr[i] > 0)
+    for(i=0;i<n;i++) {
+        if(arr[i]>0)
             pos++;
-        else if (arr[i] < 0)
+        else if(arr[i]<0)
             neg++;
         else
             zero++;
     }
-
-    printf("Positive=%d, Negative=%d, Zero=%d", pos, neg, zero);
+    printf("Positive=%d, Negative=%d, Zero=%d",pos,neg,zero);
     return 0;
 }

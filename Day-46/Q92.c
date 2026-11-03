@@ -9,27 +9,23 @@ s
 
 */
 #include <stdio.h>
-
 int main() {
     char str[100];
-    int i, j, found = 0;
+    int i,j,found=0;
     printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-
-    for (i = 0; str[i] != '\0' && found == 0; i++) {
-        if (str[i] >= 'a' && str[i] <= 'z') {
-            for (j = i + 1; str[j] != '\0'; j++) {
-                if (str[i] == str[j]) {
-                    printf("%c", str[i]);
-                    found = 1;
+    fgets(str,sizeof(str),stdin);
+    for(i=0;str[i]!='\0'&&found==0;i++) {
+        if(str[i]>='a'&&str[i]<='z') {
+            for(j=i+1;str[j]!='\0';j++) {
+                if(str[i]==str[j]) {
+                    printf("%c",str[i]);
+                    found=1;
                     break;
                 }
             }
         }
     }
-
-    if (found == 0)
+    if(found==0)
         printf("No repeating character");
-
     return 0;
 }

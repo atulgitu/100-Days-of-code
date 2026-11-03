@@ -10,25 +10,21 @@ dcba
 */
 #include <stdio.h>
 #include <string.h>
-
 int main() {
-    char str[100], temp;
-    int i, len;
+    char str[100],temp;
+    int i,len;
     printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-
-    len = strlen(str);
-    if (len > 0 && str[len - 1] == '\n') {
-        str[len - 1] = '\0';
+    fgets(str,sizeof(str),stdin);
+    len=strlen(str);
+    if(len>0&&str[len-1]=='\n') {
+        str[len-1]='\0';
         len--;
     }
-
-    for (i = 0; i < len / 2; i++) {
-        temp = str[i];
-        str[i] = str[len - 1 - i];
-        str[len - 1 - i] = temp;
+    for(i=0;i<len/2;i++) {
+        temp=str[i];
+        str[i]=str[len-1-i];
+        str[len-1-i]=temp;
     }
-
-    printf("%s", str);
+    printf("%s",str);
     return 0;
 }

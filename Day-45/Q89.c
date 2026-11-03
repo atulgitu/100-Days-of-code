@@ -10,21 +10,17 @@ Output 1:
 
 */
 #include <stdio.h>
-
 int main() {
-    char str[100], ch;
-    int i, count = 0;
+    char str[100],ch;
+    int i,count=0;
     printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-
+    fgets(str,sizeof(str),stdin);
     printf("Enter the character: ");
-    scanf(" %c", &ch);
-
-    for (i = 0; str[i] != '\0'; i++) {
-        if (str[i] == ch)
+    scanf(" %c",&ch);
+    for(i=0;str[i]!='\0';i++) {
+        if(str[i]==ch)
             count++;
     }
-
-    printf("%d", count);
+    printf("%d",count);
     return 0;
 }
